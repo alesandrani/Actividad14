@@ -1,5 +1,6 @@
 package actividad14;
 
+
 /**
  * El objetivo de esta clase es <b>representar un jugador</b>
  * 
@@ -28,6 +29,7 @@ public class Jugador {
 	 */
 	private int numeroTarjetasRojas;
 
+
 //Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
 	
 	/**
@@ -47,6 +49,7 @@ public class Jugador {
 			this.dorsal = -1;
 		}
 	}
+
 
 	/**
 	 * Metodo que <b>devuelve</b> si un jugador a sido expulsado o no. En primer lugar
