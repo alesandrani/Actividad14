@@ -1,19 +1,24 @@
 package actividad14;
 
-
 /**
- * El objetivo de esta clase es <b>representar un jugador</b>
- * 
- * Tendra <b>metodos</b> que nos permitira saber cosas del jugador
- * como el número de camiseta con el metodo <b>"ponerDorsal"</b> y
- * saber si esta expulsado co el metodo <b>"estaExpulsado"</b>.
- * 
- * @author Avril
- */
+* Clase que contine el objeto jugador, tiene como objetivo 
+* realizar un seguimiento de las diferentes estadisticas del
+* jugador. Contiene los siguientes atributos:
+* <br>
+* <ul>
+* <li> dorsal </li>
+* <li> numeroTarjetasAmarillas </li>
+* <li> numeroTarjetasRojas </li>
+* </ul>
+* <br>
+* Posee los siguientes metodos {@link #ponerDorsal(int)},
+* {@link #numeroTarjetasAmarillas} y {@link #numeroTarjetasRojas}
+* @author Yina.
+*/
 public class Jugador {
-	/**
-	 * "dorsal" representa el número de la camiseta del jugador.
-	 * Este es utilizado para crear parte del metodo "ponerDorsal"
+	 /** Representa el numero de la camiseta del jugador
+	 * Se limita su rango de valores con el metodo 
+	 * {@link #ponerDorsal(int)}
 	 */
 	private int dorsal;
 	/**
@@ -26,23 +31,28 @@ public class Jugador {
 	 * "numeroTarjetasROjas" representa el número de taretas 
 	 * rojas asignadas al jugador.
 	 * Se utiliza este atributo en el metodo "estaExpulsado"
-	 */
+	*/
 	private int numeroTarjetasRojas;
+	
 
 
 //Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
-	
+
 	/**
-	 * Metodo que <b>coloca</b> el número de dorsal pasado por parametro
-	 * al atributo "dorsal". La condicion es que si el número del 
-	 * dorsal pasado por parametro es mayor o igual a 1 y 
-	 * menor o igual a 30 se le asignara dicho número al atributo 
-	 * "dorsal". En caso contrario el atributo "dorsal" se igualara 
-	 * a "-1"
+	 * Metodo que condiciona el rango de valores que puede
+	 * tener el dorsal del jugador, teniendo como parametro de 
+	 * entrada un dorsal. 
+	 * <br>
+	 * La condicion que sigue es la siguiente: 
+	 * - Si el dorsal es mayor o igual a 1 y menor o igual a 30: El
+	 * atributo dorsal del jugador se igualara al dorsal pasado por 
+	 * parametro
+	 * - De no cumplirse la condicion anterior el atributo dorsal
+	 * se igualara a "-1"
+	 * 
 	 * @param dorsal Número de camiseta del jugador pasador por parametro
 	 */
 	public void ponerDorsal(int dorsal) {
-
 		if (dorsal >= 1 && dorsal <= 30) {
 			this.dorsal = dorsal;
 		} else {
@@ -50,19 +60,20 @@ public class Jugador {
 		}
 	}
 
-
 	/**
-	 * Metodo que <b>devuelve</b> si un jugador a sido expulsado o no. En primer lugar
-	 * se crea la variable expulsado y se iguala a "false". <b>La condicion</b> es que
-	 * si el atributo "numeroTarjetasAmarillas" es igual a 2 el jugador estara
-	 * expulsado. Ademas si el atributo "numeroTarjetasRojas" es igual a 1 tambien
-	 * sera expulsado. En caso que <b>no</b> se cumpla la condicion anterior devolvera
-	 * que no esta expulsado
-	 *  
-	 * @return true si el jugador esta expulsado o false si no estaexpulsado
+	 * Metodo que devulve si el jugador será o no expulsado, creando 
+	 * una variable llamada <i>'expulsado'</i> e igualandola a 'false'. 
+	 * <br>
+	 * Las condiciones que rigen el metodo son:
+	 * -En caso de que el jugador hubiese recibido dos tarjetas amarillas
+	 * seria expulsado.
+	 * -Si el jugador recibio directamente una tarjeta roja tambien va a 
+	 * ser expulsado. 
+	 * @return <b>true</b> si el jugador ha recibido dos tarjetas amarillas
+	 * o una roja y <b>false</b> si no secedio ninguno de los casos anteriores.
 	 */
-	public boolean estaExpulsado() {
 
+	public boolean estaExpulsado() {
 		boolean expulsado = false;
 		if (numeroTarjetasAmarillas == 2) {
 			expulsado = true;
