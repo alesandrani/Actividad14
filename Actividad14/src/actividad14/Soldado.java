@@ -53,6 +53,12 @@ public class Soldado {
 	//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación.
 	//Aquí no se han creado porque no aportan nada
 
+
+@Override
+	public String toString() {
+		return "Soldado [estaMuerto=" + estaMuerto + ", numeroBalas=" + numeroBalas + "]";
+	}
+
 public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
@@ -88,7 +94,6 @@ public boolean isEstaMuerto() {
 	 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
 	 * <b>false</b> si no es mayor a 0.
 	 */
-
 /**
  * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
  * pasado por parámetro.
