@@ -1,6 +1,4 @@
 package actividad14;
-
-
 /**
  * Clase que contine el objeto soldado, tiene como objetivo 
  * atacar a otros soldados.
@@ -14,24 +12,19 @@ package actividad14;
  * Tambien posee los siguientes metodos {@link #puedeDisparar)},
  * {@link #disparar(Soldado)}
  * @author Yina.
- * */
-
-/**
- * esta clase nos mostarara la cantidad de balas que va tener el soldado para crear los metodos
- *  que nos ayudaran saber si un soldado vive o muere
  */
 
 public class Soldado {
 	/**
-	 * Representa si el soldado esta o no Muerto
-	 * Atributo de tipo boolean
+	 * Esta propiedad nos indica si el <b>Soldado</b> está muerto o no.
 	 */
 	private boolean estaMuerto;
 	/**
-	 * Representa el numero de balas que tiene el soldado
-	 * Atributo de tipo entero
+	 * Este atributo representa el número de balas que tiene
+	 * un soldado
 	 */
 	private int numeroBalas;
+
 
 public boolean isEstaMuerto() {
 		return estaMuerto;
@@ -49,19 +42,16 @@ public boolean isEstaMuerto() {
 		this.numeroBalas = numeroBalas;
 	}
 
-	// puedeDisparar() Documentacion Yina 
-		/**
-		 * Metodo que devulve si el Soldado puede disparar o no
-		 * evaluando el atributo numeroBalas 
-		 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
-		 * <b>false</b> si no es mayor a 0.
-		 */
-	
-	/**
-	 * Este metodo nos devulve si podemos disparar o no. Si el numero de balas es superior a 0 podemos disparar 
-	 * en caso contrario no
-	 * @return true - dispara. false - no se puede disparar(no hay balas)
-	 */
+
+/**
+ * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
+ * pasado por parámetro.
+ * Si el número de balas es mayor que 0, entonces <b>sí</b> podrá disparar.
+ * En caso de que sea igual a 0 <b>no</b> podrá disparar.
+ * @return<b>true</b> si le quedan balas y puede disparar o <b>false</b> si no le quedan balas 
+ * no puede disparar.
+*/
+
 	public boolean puedeDisparar() {
 
 		if (this.numeroBalas > 0) {
@@ -71,7 +61,6 @@ public boolean isEstaMuerto() {
 
 	}
 
-
 	/**
 	 * Metodo mediante el cual se mata a un Soldado pasado por
 	 * parametro. Se le restara una bala al soldado desde el 
@@ -80,14 +69,9 @@ public boolean isEstaMuerto() {
 	 * @param sol representa el soldado que morirá.
 	 */
 
-/**
- * Este metodo evalua cuando muere un soldado.
- * invocando este metodo se comieza la lucha el soldado que se quede primero sin balas muere.
- * @param sol objeto soldado
- */
-
 	public void disparar(Soldado sol) {
 		this.numeroBalas--;
 		sol.estaMuerto = true;
 	}
 }
+
