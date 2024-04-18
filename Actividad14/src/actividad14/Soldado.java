@@ -1,5 +1,6 @@
 package actividad14;
 
+
 /**
  * Esta clase incluye dos métodos que darán funcionalidad al <b>Soldado</b>.
  * El primer método nos dirá si al soldado le quedan balas o no.
@@ -40,9 +41,14 @@ public class Soldado {
 	 * Representa el numero de balas que tiene el soldado
 	 * Atributo de tipo entero
 	 */
+	/**
+	 * Este atributo representa el número de balas que tiene
+	 * un soldado
+	 */
 
 
 	private int numeroBalas;
+
 
 	//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación.
 	//Aquí no se han creado porque no aportan nada
@@ -83,6 +89,16 @@ public boolean isEstaMuerto() {
 	 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
 	 * <b>false</b> si no es mayor a 0.
 	 */
+
+/**
+ * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
+ * pasado por parámetro.
+ * Si el número de balas es mayor que 0, entonces <b>sí</b> podrá disparar.
+ * En caso de que sea igual a 0 <b>no</b> podrá disparar.
+ * @return<b>true</b> si le quedan balas y puede disparar o <b>false</b> si no le quedan balas 
+ * no puede disparar.
+*/
+
 	public boolean puedeDisparar() {
 
 		if (this.numeroBalas > 0) {
@@ -91,12 +107,6 @@ public boolean isEstaMuerto() {
 		return false;
 
 	}
-	/**
-	 * Este método sirve para que el soldado dispare. Cuando el soldado dispara, gasta balas,
-	 * por lo tanto se le resta una bala al número de balas que le habíamos pasado por parámetro.
-	 * Además al objeto sol pasado por parámetro que reciba el disparo morirá.
-	 * @param <b>sol</b> el objeto sol pasado por parámetro al que queremos disparar.
-	 */
 
 	/**
 	 * Metodo mediante el cual se mata a un Soldado pasado por
@@ -105,13 +115,6 @@ public boolean isEstaMuerto() {
 	 * estaMuerto del soldado pasado por parametro a 'true'
 	 * @param sol representa el soldado que morirá.
 	 */
-
-
-/**
- * Este metodo evalua cuando muere un soldado.
- * invocando este metodo se comieza la lucha el soldado que se quede primero sin balas muere.
- * @param sol objeto soldado
- */
 
 	public void disparar(Soldado sol) {
 		this.numeroBalas--;
