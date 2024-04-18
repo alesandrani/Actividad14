@@ -4,14 +4,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		//JUGADOR
+
 		//*****************************Aleksandra***********************************************
 		//Prueba 1 ponerDorsal
 		//dorsal = 1
 		//resultadoEsperado = 1
 		
-		//Prueba 2 
-		//dorsal = 45
-		//resultadoEsperado = -1
+		//Prueba 2.
+		//dorsal = 12
+		//resultado esperado = 12
 		
 		//Prueba 3
 		//dorsal = 20
@@ -29,17 +30,17 @@ public class Main {
 			System.out.println("Prueba 1 ponerDorsal -> KO");
 		}
 
-		// Prueba 2 ponerDorsal()
+		//Ejecución Prueba 2.
 		Jugador j2 = new Jugador();
-		dorsal = 45;
-		resultadoEsperado = -1;
-		j2.ponerDorsal(dorsal);
+		int dorsal2 = 12;
+		resultadoEsperado = 12;
+		j2.setDorsal(dorsal2);
 		resultadoObtenido = j2.getDorsal();
-		if (resultadoEsperado == resultadoObtenido) {
-			System.out.println("Prueba 2 ponerDorsal -> OK");
-		} else {
-			System.out.println("Prueba 2 ponerDorsal -> KO");
-		}
+		if(resultadoEsperado == resultadoObtenido) {
+			System.out.println("ponerDorsal() Prueba 2 --> OK");
+		}else {
+			System.out.println("ponerDorsal() Prueba 2 --> KO");
+		}	
 
 		// Prueba 3 ponerDorsal()
 		Jugador j3 = new Jugador();
@@ -53,10 +54,10 @@ public class Main {
 			System.out.println("Prueba 3 ponerDorsal -> KO");
 		}
 //*********************************Aleksandra**********************************************		
-		//Prueba 1 estaExpulsado
-		//numeroTarjetasAmarillas = 1
-		//numeroTarjetasRojas = 1
-		//resultadoEsperado = true
+		//Prueba 1.
+		//tarjetasRojas = 0
+		//tarjetasAmarillas = 2
+		//resultado esperado = true
 		
 		//Prueba 2 EstaExpulsado
 		//numeroTarjetasAmarillas = 2
@@ -75,28 +76,29 @@ public class Main {
 		
 		System.out.println("***************************");
 		
-		// Prueba 1 estaExpulsad0()
-		Jugador j4 = new Jugador();
-		int numeroTarjetasAmarillas = 1;
-		int numeroTarjetasRojas = 1;
-		boolean yresultadoEsperado = true;
-		j4.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
-		j4.setNumeroTarjetasRojas(numeroTarjetasRojas);
-		boolean yrestuldadoObtenido = j4.estaExpulsado();
-		if (resultadoEsperado == resultadoObtenido) {
-			System.out.println("Prueba 1 estaExpulsado -> OK");
-		} else {
-			System.out.println("Prueba 1 estaExpulsado -> KO");
-		}
-
-		// Prueba 2 estaExpulsado()
 		Jugador j5 = new Jugador();
-		numeroTarjetasAmarillas = 2;
-		numeroTarjetasRojas = 0;
-		yresultadoEsperado = true;
+		int numeroTarjetasRojas = 0;
+		int numeroTarjetasAmarillas = 2;
+		boolean bResultadoEsperado = true;
 		j5.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
 		j5.setNumeroTarjetasRojas(numeroTarjetasRojas);
-		yrestuldadoObtenido = j5.estaExpulsado();
+		boolean bResultadoObtenido = j5.estaExpulsado();
+		if(bResultadoEsperado == bResultadoObtenido) {
+			System.out.println("estaExpulsado() Prueba 1 --> OK");
+		}else {
+			System.out.println("estaExpulsado() Prueba 1 --> KO");
+		}
+		
+		
+
+		// Prueba 2 estaExpulsado()
+		Jugador j6 = new Jugador();
+		numeroTarjetasAmarillas = 2;
+		numeroTarjetasRojas = 0;
+		bResultadoEsperado = true;
+		j6.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
+		j6.setNumeroTarjetasRojas(numeroTarjetasRojas);
+		bResultadoObtenido = j6.estaExpulsado();
 		if (resultadoEsperado == resultadoObtenido) {
 			System.out.println("Prueba 2 estaExpulsado -> OK");
 		} else {
@@ -104,13 +106,13 @@ public class Main {
 		}
 
 		// Prueba 3 estaExpulsado()
-		Jugador j6 = new Jugador();
+		Jugador j7 = new Jugador();
 		numeroTarjetasAmarillas = 0;
 		numeroTarjetasRojas = 0;
-		yresultadoEsperado = true;
-		j6.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
-		j6.setNumeroTarjetasRojas(numeroTarjetasRojas);
-		yrestuldadoObtenido = j6.estaExpulsado();
+		bResultadoEsperado = true;
+		j7.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
+		j7.setNumeroTarjetasRojas(numeroTarjetasRojas);
+		bResultadoObtenido = j7.estaExpulsado();
 		if (resultadoEsperado == resultadoObtenido) {
 			System.out.println("Prueba 3 estaExpulsado -> OK");
 		} else {
@@ -118,13 +120,13 @@ public class Main {
 		}
 
 		// Prueba 4 estaExpulsado()
-		Jugador j7 = new Jugador();
+		Jugador j8 = new Jugador();
 		numeroTarjetasAmarillas = 2;
 		numeroTarjetasRojas = 2;
-		yresultadoEsperado = true;
-		j7.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
-		j7.setNumeroTarjetasRojas(numeroTarjetasRojas);
-		yrestuldadoObtenido = j7.estaExpulsado();
+		bResultadoEsperado = true;
+		j8.setNumeroTarjetasAmarillas(numeroTarjetasAmarillas);
+		j8.setNumeroTarjetasRojas(numeroTarjetasRojas);
+		bResultadoObtenido = j8.estaExpulsado();
 		if (resultadoEsperado == resultadoObtenido) {
 			System.out.println("Prueba 4 estaExpulsado -> OK");
 		} else {
@@ -139,9 +141,9 @@ public class Main {
 		//numeroBalas = 0
 		//resultadoEsperado = false
 		
-		//Prueba 2 puedeDisparar
-		//numeroBalas = 20
-		// resultadoEsperado = true
+		//Prueba 2.
+		//numeroBalas = 10
+		//resultado esperado = true
 		
 		// Prueba 1 puedeDisparar()
 		Soldado s1 = new Soldado();
@@ -154,18 +156,20 @@ public class Main {
 		} else {
 			System.out.println("Pruba 1 puedeDisparar -> KO");
 		}
-
-		// Prueba 2 puedeDisparar()
+		
+		//Ejecutamos prueba 2. 
 		Soldado s2 = new Soldado();
-		numeroBalas = 20;
-		aresultadoEsperado = true;
-		s2.setNumeroBalas(numeroBalas);
-		aresultadoObtenido = s2.puedeDisparar();
-		if (aresultadoEsperado == aresultadoObtenido) {
-			System.out.println("Pruba 2 puedeDisparar -> OK");
-		} else {
-			System.out.println("Pruba 2 puedeDisparar -> KO");
+		int numeroBalas2 = 0;
+		bResultadoEsperado = false;
+		s1.setNumeroBalas(numeroBalas2);
+		bResultadoObtenido = s2.puedeDisparar();
+		if(bResultadoEsperado == bResultadoObtenido) {
+			System.out.println("puedeDisparar() Prueba 2 --> OK");
+		}else {
+			System.out.println("puedeDisparar() Prueba 2 --> KO");
+		
 		}
+
 		
 		//*******************************Aleksandra****************************************************
 		//Prueba 1 disparar(sol)
@@ -194,6 +198,18 @@ public class Main {
 			System.out.println("Prueba 1 puedeDisparar -> KO");
 		}
 
+
+	
+
+	
+	
+	
+	//SOLDADO 
+
+
+	
+
+	}
+	
 	}
 
-}
