@@ -26,6 +26,13 @@ public class Soldado {
 	private int numeroBalas;
 
 
+
+
+@Override
+	public String toString() {
+		return "Soldado [estaMuerto=" + estaMuerto + ", numeroBalas=" + numeroBalas + "]";
+	}
+
 public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
@@ -41,7 +48,6 @@ public boolean isEstaMuerto() {
 	public void setNumeroBalas(int numeroBalas) {
 		this.numeroBalas = numeroBalas;
 	}
-
 
 /**
  * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan

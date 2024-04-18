@@ -38,6 +38,36 @@ public class Jugador {
 
 //Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
 
+	@Override
+	public String toString() {
+		return "Jugador [dorsal=" + dorsal + ", numeroTarjetasAmarillas=" + numeroTarjetasAmarillas
+				+ ", numeroTarjetasRojas=" + numeroTarjetasRojas + "]";
+	}
+
+	public int getDorsal() {
+		return dorsal;
+	}
+
+	public void setDorsal(int dorsal) {
+		this.dorsal = dorsal;
+	}
+
+	public int getNumeroTarjetasAmarillas() {
+		return numeroTarjetasAmarillas;
+	}
+
+	public void setNumeroTarjetasAmarillas(int numeroTarjetasAmarillas) {
+		this.numeroTarjetasAmarillas = numeroTarjetasAmarillas;
+	}
+
+	public int getNumeroTarjetasRojas() {
+		return numeroTarjetasRojas;
+	}
+
+	public void setNumeroTarjetasRojas(int numeroTarjetasRojas) {
+		this.numeroTarjetasRojas = numeroTarjetasRojas;
+	}
+
 	/**
 	 * Metodo que condiciona el rango de valores que puede
 	 * tener el dorsal del jugador, teniendo como parametro de 
