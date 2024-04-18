@@ -33,20 +33,6 @@ public class Soldado {
 	 */
 	private int numeroBalas;
 
-
-    //Crear los métodos “get” y “set” de los atributos cuando se vayan
-	//a hacer las pruebas y la documentación. Aquí no se han creado porque no
-	//aportan nada
-	
-	// puedeDisparar() Documentacion Yina 
-	/**
-	 * Metodo que devulve si el Soldado puede disparar o no
-	 * evaluando el atributo numeroBalas 
-	 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
-	 * <b>false</b> si no es mayor a 0.
-	 */
-
-
 public boolean isEstaMuerto() {
 		return estaMuerto;
 	}
@@ -63,8 +49,13 @@ public boolean isEstaMuerto() {
 		this.numeroBalas = numeroBalas;
 	}
 
-	//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación.
-	//Aquí no se han creado porque no aportan nada
+	// puedeDisparar() Documentacion Yina 
+		/**
+		 * Metodo que devulve si el Soldado puede disparar o no
+		 * evaluando el atributo numeroBalas 
+		 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
+		 * <b>false</b> si no es mayor a 0.
+		 */
 	
 	/**
 	 * Este metodo nos devulve si podemos disparar o no. Si el numero de balas es superior a 0 podemos disparar 
