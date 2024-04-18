@@ -69,7 +69,6 @@ public boolean isEstaMuerto() {
 		this.numeroBalas = numeroBalas;
 	}
 
-	
 	/**
 	 * Este metodo nos devulve si podemos disparar o no. Si el numero de balas es superior a 0 podemos disparar 
 	 * en caso contrario no
