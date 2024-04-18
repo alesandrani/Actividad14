@@ -7,29 +7,9 @@ package actividad14;
  * @author Felix de Pablo
  * @version 1.0
 
- * esta clase nos mostarara la cantidad de balas que va tener el soldado para crear los metodos
+/** esta clase nos mostarara la cantidad de balas que va tener el soldado para crear los metodos
  *  que nos ayudaran saber si un soldado vive o muere
  */
-public class Soldado {
-	/**
-	 * Esta propiedad nos indica si el <b>Soldado</b> está muerto o no.
-	 */
-	private boolean estaMuerto;
-	/**
-	 * Esta propiedad nos indica el número de balas pasadas por parámetro.
-	 */
-	private int numeroBalas;
-
-
-//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación. Aquí no se han creado porque no aportan nada
-	/**
-	 * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
-	 * pasado por parámetro.
-	 * Si el número de balas es mayor que 0, entonces <b>sí</b> podrá disparar.
-	 * En caso de que sea igual a 0 <b>no</b> podrá disparar.
-	 * @return<b>true</b> si le quedan balas y puede disparar o <b>false</b> si no le quedan balas 
-	 * no puede disparar.
-
 /**
  * Clase que contine el objeto soldado, tiene como objetivo 
  * atacar a otros soldados.
@@ -43,38 +23,29 @@ public class Soldado {
  * Tambien posee los siguientes metodos {@link #puedeDisparar)},
  * {@link #disparar(Soldado)}
  * @author Yina.
- * */
-
-/**
- * esta clase nos mostarara la cantidad de balas que va tener el soldado para crear los metodos
- *  que nos ayudaran saber si un soldado vive o muere
  */
-
 public class Soldado {
+	/**
+	 * Esta propiedad nos indica si el <b>Soldado</b> está muerto o no.
+	 */
 	/**
 	 * Representa si el soldado esta o no Muerto
 	 * Atributo de tipo boolean
 	 */
 	private boolean estaMuerto;
 	/**
+	 * Esta propiedad nos indica el número de balas pasadas por parámetro.
+	 */
+	/**
 	 * Representa el numero de balas que tiene el soldado
 	 * Atributo de tipo entero
 	 */
+
+
 	private int numeroBalas;
 
-
-    //Crear los métodos “get” y “set” de los atributos cuando se vayan
-	//a hacer las pruebas y la documentación. Aquí no se han creado porque no
-	//aportan nada
-	
-	// puedeDisparar() Documentacion Yina 
-	/**
-	 * Metodo que devulve si el Soldado puede disparar o no
-	 * evaluando el atributo numeroBalas 
-	 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
-	 * <b>false</b> si no es mayor a 0.
-	 */
-
+	//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación.
+	//Aquí no se han creado porque no aportan nada
 
 public boolean isEstaMuerto() {
 		return estaMuerto;
@@ -92,17 +63,25 @@ public boolean isEstaMuerto() {
 		this.numeroBalas = numeroBalas;
 	}
 
-	//Crear los métodos “get” y “set” de los atributos cuando se vayan a hacer las pruebas y la documentación.
-	//Aquí no se han creado porque no aportan nada
 	
 	/**
 	 * Este metodo nos devulve si podemos disparar o no. Si el numero de balas es superior a 0 podemos disparar 
 	 * en caso contrario no
 	 * @return true - dispara. false - no se puede disparar(no hay balas)
-<<<<<<< HEAD
->>>>>>> 977dadbbef5b3607214a34a03eba1a896dfbb0c5
-=======
->>>>>>> ce10405fbbc1a92d5c261bf47f05bb1e10d21813
+	 */
+	/**
+	 * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
+	 * pasado por parámetro.
+	 * Si el número de balas es mayor que 0, entonces <b>sí</b> podrá disparar.
+	 * En caso de que sea igual a 0 <b>no</b> podrá disparar.
+	 * @return<b>true</b> si le quedan balas y puede disparar o <b>false</b> si no le quedan balas 
+	 * no puede disparar.
+	*/
+	/**
+	 * Metodo que devulve si el Soldado puede disparar o no
+	 * evaluando el atributo numeroBalas 
+	 * @return <b>true</b> Si el atributo numeroBalas es mayor a 0 y
+	 * <b>false</b> si no es mayor a 0.
 	 */
 	public boolean puedeDisparar() {
 
@@ -139,4 +118,4 @@ public boolean isEstaMuerto() {
 		sol.estaMuerto = true;
 	}
 }
-}
+
