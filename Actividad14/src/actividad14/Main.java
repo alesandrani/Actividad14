@@ -132,12 +132,74 @@ public class Main {
 	}else {
 		System.out.println("estaExpulsado() Prueba 3 --> KO");
 	}
-	
+//*****************************************************************************************************	
 	
 	
 	
 	//SOLDADO 
 
+//*****************************************************************************************************
+	//Método puedeDisparar()
+	
+		//Prueba 1.
+			//numeroBalas = 0
+			//resultado esperado = false
+		
+		//Prueba 2.
+			//numeroBalas = 10
+			//resultado esperado = true
+	
+	//Ejecutamos prueba 1 
+	Soldado s1 = new Soldado();
+	int numeroBalas1 = 0;
+	bResultadoEsperado = false;
+	s1.setNumeroBalas(numeroBalas1);
+	bResultadoObtenido = s1.puedeDisparar();
+	if(bResultadoEsperado == bResultadoObtenido) {
+		System.out.println("puedeDisparar() Prueba 1 --> OK");
+	}else {
+		System.out.println("puedeDisparar() Prueba 1 --> KO");
 	}
+	
+	//Ejecutamos prueba 2. 
+	Soldado s2 = new Soldado();
+	int numeroBalas2 = 0;
+	bResultadoEsperado = false;
+	s1.setNumeroBalas(numeroBalas2);
+	bResultadoObtenido = s2.puedeDisparar();
+	if(bResultadoEsperado == bResultadoObtenido) {
+		System.out.println("puedeDisparar() Prueba 2 --> OK");
+	}else {
+		System.out.println("puedeDisparar() Prueba 2 --> KO");
+	
+	}
+//**********************************************************************************************************
+	
+//**********************************************************************************************************
+	
+	//Metodo disparar(sol)
+	
+		//Prueba 1
+			//numeroBalasInicial = 10
+			//numeroBalasEsperado = 9
+			//sol.estaMuerto = false
+			//resultado esperado = true
+	
+	//Ejecutamos Prueba 1.
+	Soldado sDispara = new Soldado();
+	Soldado sDisparado = new Soldado();
+	sDispara.setNumeroBalas(10);
+	int numeroBalasEsperado = 9;
+	sDisparado.setEstaMuerto(false);
+	sDispara.disparar(sDisparado);
+	int numeroBalasFinal = sDispara.getNumeroBalas();
+	if(numeroBalasFinal == numeroBalasEsperado) {
+		if(sDisparado.isEstaMuerto()) {
+			System.out.println("puedeDisparar() Prueba 1 --> OK");
+		}else {
+			System.out.println("puedeDisparar() Prueba 1 --> KO");
 
+	}
+	}
+	}
 }
