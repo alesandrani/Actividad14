@@ -95,10 +95,10 @@ public boolean isEstaMuerto() {
 	 * <b>false</b> si no es mayor a 0.
 	 */
 /**
- * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que se hayan
- * pasado por parámetro.
+ * Este método nos indica si el <b>Soldado</b> puede o no disparar, en función del número de balas que 
+ * tenga el soldado.
  * Si el número de balas es mayor que 0, entonces <b>sí</b> podrá disparar.
- * En caso de que sea igual a 0 <b>no</b> podrá disparar.
+ * En caso de que sea igual o menor a 0 <b>no</b> podrá disparar.
  * @return<b>true</b> si le quedan balas y puede disparar o <b>false</b> si no le quedan balas 
  * no puede disparar.
 */
@@ -117,7 +117,7 @@ public boolean isEstaMuerto() {
 	 * parametro. Se le restara una bala al soldado desde el 
 	 * cual se llama el metodo y se igualará el atributo
 	 * estaMuerto del soldado pasado por parametro a 'true'
-	 * @param sol representa el soldado que morirá.
+	 * @param representa el soldado que morirá.
 	 */
 
 	public void disparar(Soldado sol) {
